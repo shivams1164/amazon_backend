@@ -4,7 +4,7 @@ const productRouter = require('./routes/productRoute.js')
 const productModel = require('./models/productsModel.js')
 const userRouter = require('./routes/userRoute.js')
 const reviewRouter = require('./routes/reviewRoute.js')
-
+const orderRouter = require('./routes/orderRoute.js')
 const app = express();
 
 const url = "mongodb+srv://$_USERNAME_$:$_PASSWORD_$@cluster0.eimdsfm.mongodb.net/$_DB_Name_$?retryWrites=true&w=majority&appName=Cluster0"
@@ -23,6 +23,7 @@ app.use(express.json());
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter)
 app.use('/api/review', reviewRouter)
+app.use('/api/orders', orderRouter)
 app.listen(1164, (req, res) => {
     console.log("Server started");
 

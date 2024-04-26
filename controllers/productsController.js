@@ -92,7 +92,7 @@ const getAllProducts = async (req, res) => {
         page: page,
         pagesize: pagesize,
         data: {
-            products,                    
+            products,
         }
     })
 
